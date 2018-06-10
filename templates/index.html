@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter</title>
+</head>
+<body>
+	<h1>Counter!</h1>
+	<!-- sets session "count" to be dynamic and changed based on the number of times the add two button is clicked. !-->
+	<h3>{{ session['count'] }} views..</h3>
+	<!-- action uses the route of the decorator once clicked to call the function -->
+	<form action="/count_two" method="post">
+		<input type="submit" name="add_two" value="Add two">
+	</form>
+	<form action='/plus_one' method='post'>
+		<input type="submit" name="add_one" value="Add one">
+	</form>
+	<form action="/reset" method="post">
+		<input type="submit" name="reset" value="Reset">
+	</form>
+
+</body>
+</html>
